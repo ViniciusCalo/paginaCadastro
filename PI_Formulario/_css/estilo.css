@@ -1,0 +1,10 @@
+body{
+    padding-left: 710px;
+    margin: 30px;
+    background-color: #02ac3b;
+}
+table{
+    border-radius: 5%;
+    box-shadow: 5px 5px 15px 5px;
+    background-image: linear-gradient(#b5ff7d, #035e1e);
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="_css/estilo.css">
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css " rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-maskmoney/3.0.2/jquery.maskMoney.min.js"></script>
+    <script src="_javascript/validando.js"></script>
+    <title>Cadastro</title>
+</head>
+
+<body>
+    <table>
+        <tbody>
+            <form class="forms" name="form" id="form" onsubmit="return cadastro()">
+
+                <tr>
+                    <th colspan="2"><strong>Cadastro de Assinantes - Canais de Esporte</strong></th>
+                </tr>
+                <tr>
+                    <td> <label for="nome">Nome:</label> </td>
+                    <td><input type="text" name="nome" id="nome" autocomplete="off" required></td>
+                </tr>
+                <tr>
+                    <td><label for="cpf">CPF/CNPJ:</label></td>
+                    <td><input type="text" name="cpf" id="cpf" autocomplete="off" required class="mask-cpf"></td>
+                </tr>
+                <tr>
+                    <td><label for="tel">Telefone:</label></td>
+                    <td><input type="text" name="tel" id="tel" autocomplete="off" class="mask-numeros" required ></td>
+                </tr> 
+                <tr>
+                    <td><label for="cep">CEP:</label></td>
+                    <td><input type="text" name="cep" id="cep" autocomplete="off" class="mask-cep" required
+                        onblur="pesquisacep(this.value);" /></label><br /></td>
+                </tr>
+                <tr>
+                    <td><label for="log">Logradouro(Rua, avenida e etc): </label></td>
+                    <td><input type="text" name="log" id="log" autocomplete="off" required  disabled></td>
+                </tr>
+                <tr>
+                    <td><label for="compl">Complemento:</label></td>
+                    <td><input type="text" name="compl" id="compl" autocomplete="off" ></td>
+                </tr>
+                <tr>
+                    <td><label for="num">Numeros: </label></td>
+                    <td><input type="text" name="numero" id="numero" autocomplete="off" required ></td>
+                </tr>
+                <tr>
+                    <td><label for="bairro">Bairro:</label></td>
+                    <td><input type="text" name="bairro" id="bairro" autocomplete="off" required disabled ></td>
+                </tr>
+                <tr>
+                    <td><label for="cdd">Cidade: </label></td>
+                    <td><input type="text" name="cidade" id="cdd" autocomplete="off" required disabled></td>
+                </tr>
+                <tr>
+                    <td><label for="est">Estado:</label></td>
+                    <td><input type="text" name="est" id="est" autocomplete="off" required disabled ></td>
+                </tr>
+                <tr>
+                    <td><button id="cadastrar" type="submit" >Cadastrar</button></td>
+                    <td><button id="limpar" type="reset">Limpar</button></td>
+                </tr>
+
+
+
+    </table>
+</body>
+
+</html>
